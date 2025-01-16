@@ -78,13 +78,13 @@ h2 {
 
   span {
     margin: 0 0.25em;
-    border: 1px solid #e36bae;
-    border-radius: 10px;
+    border: 1px solid #000000;
+    border-radius:30px;
     padding: 0.25em 0.75em;
 
     &:hover {
       cursor: pointer;
-      background: linear-gradient(to bottom right, #e36bae, #fb743e);
+      background: linear-gradient(to bottom right, #6d6be3, #c54f20);
     }
   }
 
