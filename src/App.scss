@@ -1,12 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
-.App {
+body {
+  background: rgb(40, 31, 53);
+  background: linear-gradient(to right, rgb(40, 31, 53), rgb(215, 148, 80));
+  color: rgb(235, 235, 235);
+  font-family: "Architects Daughter", cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 1em 0 0 0;
+  font-size: 3rem;
   text-align: center;
 }
 
+h2 {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  margin-bottom: 1em;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,6 +55,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2em;
+  box-sizing: border-box;
 }
 
 .App-link {
@@ -39,79 +72,63 @@
   }
 }
 
-.App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-body {
-  background: rgb(40, 31, 53);
-  background: linear-gradient(to right, rgb(40, 31, 53), rgb(215, 148, 80));
-
-  color: #e40017;
-  color: #e36bae;
-  color: #fb743e;
-  color: rgb(235, 235, 235);
-
-  font-family: "Architects Daughter", cursive;
-}
-
-h1 {
-  margin: 1em 0 0 0;
-  font-size: 3rem;
-}
-
-h2 {
-  margin-bottom: 2em;
-}
-
 .radio {
-  max-width: 60em;
+  max-width: 90%;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .filters {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 2em;
   font-size: 1.2rem;
+}
 
-  span {
-    margin: 0 0.25em;
-    border: 1px solid #000000;
-    border-radius:30px;
-    padding: 0.25em 0.75em;
+.filters span {
+  margin: 0.5em;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  padding: 0.5em 1em;
+  transition: background 0.3s ease;
+}
 
-    &:hover {
-      cursor: pointer;
-      background: linear-gradient(to bottom right, #6d6be3, #c54f20);
-    }
-  }
+.filters span:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #6d6be3, #c54f20);
+}
 
-  .selected {
-    background: linear-gradient(to bottom right, #e36bae, #fb743e);
-  }
+.filters .selected {
+  background: linear-gradient(to bottom right, #e36bae, #fb743e);
 }
 
 .stations {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  justify-items: center;
 }
 
 .station {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 1px solid rgb(76, 62, 95);
-  margin: 0.25em;
   border-radius: 10px;
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+  box-sizing: border-box;
+}
 
-  &:hover {
-    border-color: #e36bae;
-  }
+.station:hover {
+  border-color: #18be39;
 }
 
 .stationName {
@@ -120,12 +137,7 @@ h2 {
   margin-bottom: 1em;
   width: 100%;
   align-items: center;
-  justify-content: start;
-}
-
-.name {
-  width: 100%;
-  text-align: center;
+  justify-content: center;
 }
 
 .stationName img {
@@ -134,7 +146,12 @@ h2 {
   height: 2.5em;
   border-radius: 50%;
   border: 2px solid rgb(76, 62, 95);
-  margin: 0 0.25em;
+  margin-right: 0.5em;
+}
+
+.name {
+  text-align: center;
+  flex: 1;
 }
 
 audio {
@@ -144,8 +161,9 @@ audio {
 .rhap_container.player {
   background-color: rgb(76, 62, 95);
   display: flex;
-  justify-items: center;
-  padding: 0.25em 0.75em;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
   border-radius: 10px;
 }
 
@@ -163,4 +181,26 @@ audio {
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
   fill: #e36bae !important;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .filters span {
+    padding: 0.5em;
+  }
+
+  .stations {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .station {
+    font-size: 1rem;
+  }
 }
