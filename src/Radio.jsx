@@ -1,9 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { RadioBrowserApi } from "radio-browser-api";
 import AudioPlayer from "./components/AudioPlayer";
-
 import defaultImage from "./assets/radio.jpg";
 
+
+// Header Component
+const Header = () => {
+  return (
+    <header className="header">
+      <h1>BH-BIBI-RADIO</h1>
+    </header>
+  );
+};
+// Spinner Component
+const VariantsExample = () => {
+  return (
+    <div className="spinner">
+      <Spinner animation="grow" variant="danger" />
+    </div>
+  );
+};
+
+// Footer Component
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>© 2025 BH-BIBI-RADIO .  SCRIPTED  BY  AMMAR  ALKHALIDI .</p>
+    </footer>
+  );
+};
 
 export default function Radio() {
   const [stations, setStations] = useState([]);
@@ -18,12 +43,24 @@ export default function Radio() {
     const stations = await api.searchStations({
       language: "english",
       tag: stationFilter,
-      limit: 30,
+      limit: 12,
     });
     return stations;
   };
 
-  const filters = ["all", "classical", "country", "dance", "disco", "house", "jazz", "pop", "rap", "retro", "rock"];
+  const filters = [
+    "all",
+    "classical",
+    "country",
+    "dance",
+    "disco",
+    "house",
+    "jazz",
+    "pop",
+    "rap",
+    "retro",
+    "rock",
+  ];
 
   const setDefaultSrc = (event) => {
     event.target.src = defaultImage;
@@ -31,6 +68,8 @@ export default function Radio() {
 
   return (
     <div className="radio">
+      <Header />
+
       <div className="filters">
         {filters.map((filter) => (
           <span
@@ -42,6 +81,7 @@ export default function Radio() {
           </span>
         ))}
       </div>
+
       <div className="stations">
         {stations.map((station, index) => (
           <div className="station" key={index}>
@@ -66,6 +106,8 @@ export default function Radio() {
           </div>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 }

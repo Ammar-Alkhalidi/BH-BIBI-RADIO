@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 body {
-   background: rgb(40, 31, 53); 
-   background-image: url("./assets/DALL·E\ 2025-01-16\ 14.45.31\ -\ A\ luxurious\ and\ vibrant\ SVG-style\ logo\ for\ a\ radio\ station\ with\ the\ name\ \'BH-BIBI\'\ prominently\ displayed.\ The\ design\ features\ a\ detailed\ and\ elegant\ r.webp");
+  background: #000;
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
-   /* background: linear-gradient(to right, rgb(40, 31, 53), rgb(215, 148, 80)); */
   color: rgb(235, 235, 235);
   font-family: "Architects Daughter", cursive;
   margin: 0;
@@ -36,43 +34,32 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 1em;
-}
 
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-  margin-bottom: 1em;
-}
+  &-logo {
+    height: 20vmin;
+    pointer-events: none;
+    margin-bottom: 1em;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: App-logo-spin infinite 20s linear;
+    }
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 2em;
-  box-sizing: border-box;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 2em;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+
+  &-link {
+    color: #61dafb;
   }
 }
 
@@ -90,24 +77,24 @@ h2 {
   flex-wrap: wrap;
   margin-bottom: 2em;
   font-size: 1.2rem;
-}
 
-.filters span {
-  margin: 0.5em;
-  border: 1px solid #30aa43;
-  background: #eb3b3b;
-  border-radius: 30px;
-  padding: 0.5em 1em;
-  transition: background 0.3s ease;
-}
+  span {
+    margin: 0.5em;
+    border: 1px solid #30aa43;
+    background: #eb3b3b;
+    border-radius: 30px;
+    padding: 0.5em 1em;
+    transition: background 0.3s ease;
 
-.filters span:hover {
-  cursor: pointer;
-  background: linear-gradient(to bottom right, #6d6be3, #c54f20);
-}
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom right, #f4f409, #000000);
+    }
+  }
 
-.filters .selected {
-  background: linear-gradient(to bottom right, #6be381, #1c1b1b);
+  .selected {
+    background: linear-gradient(to bottom right, #5ef041, #1c1b1b);
+  }
 }
 
 .stations {
@@ -119,45 +106,55 @@ h2 {
 
 .station {
   font-size: 1.2rem;
-  border: 1px solid rgb(76, 62, 95);
-  background-color: #c931268d;
-  border-radius: 10px;
+  border: 1px solid rgb(195, 78, 11);
+  border-radius: 28px;
+  background-color: #2d2d2d;
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: border-color 0.3s ease;
-  width: 100%;
+  width: 1142px;
+  margin: 0 auto;
   max-width: 250px;
   box-sizing: border-box;
-}
 
-.station:hover {
-  border-color: #18be39;
-}
+  &:hover {
+    border-color: #ff0000;
+    transform: scale(2);
+    text-decoration: none;
+    color: #17d70d;
+  }
 
-.stationName {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1em;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
+  .stationName {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
-.stationName img {
-  display: block;
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 50%;
-  border: 2px solid rgb(76, 62, 95);
-  margin-right: 0.5em;
-}
+    img {
+      display: block;
+      width: 2.5em;
+      height: 2.5em;
+      border-radius: 50%;
+      border: 2px solid rgb(211, 0, 0);
+      margin-right: 0.5em;
+    }
+  }
 
-.name {
-  text-align: center;
-  flex: 1;
+  .name {
+    text-align: center;
+    flex: 1;
+    color: #17d70d;
+    min-height: 87px;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+    position: relative;
+  }
 }
 
 audio {
@@ -165,28 +162,70 @@ audio {
 }
 
 .rhap_container.player {
-  background-color: rgb(76, 62, 95);
+  background-color: rgb(39, 12, 76);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5em;
   border-radius: 10px;
+
+  .rhap_stacked .rhap_controls-section {
+    margin-top: 0 !important;
+  }
+
+  .rhap_controls-section {
+    .rhap_volume-controls {
+      justify-content: center;
+    }
+
+    .rhap_main-controls button[aria-label="Play"] svg path {
+      fill: rgb(235, 235, 235) !important;
+    }
+
+    .rhap_main-controls button[aria-label="Pause"] svg path {
+      fill: #e36bae !important;
+    }
+  }
 }
 
-.rhap_stacked .rhap_controls-section {
-  margin-top: 0 !important;
+.header {
+  background-color: #1c1c1c;
+  background-image: url(./assets/react.svg);
+  color: #f4f4f4;
+  width: 100%;
+  text-align: center;
+  padding: 1.5em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 50px;
+ 
 }
 
-.rhap_controls-section .rhap_volume-controls {
-  justify-content: center;
+.footer {
+  background-color: #1c1c1c;
+  color: #aaa;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto;
+ border-radius: 10px;
+  font-size: 1rem;
 }
 
-.rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
-  fill: rgb(235, 235, 235) !important;
+.footer p {
+  margin: 0;
+  line-height: 1.5;
 }
 
-.rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: #e36bae !important;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {
@@ -207,6 +246,6 @@ audio {
   }
 
   .station {
-    font-size: 1rem;
+    max-width: 200px;
   }
 }
