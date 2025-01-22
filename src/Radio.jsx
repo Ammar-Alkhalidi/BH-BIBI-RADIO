@@ -2,13 +2,19 @@ import React, { useEffect, useState } from "react";
 import { RadioBrowserApi } from "radio-browser-api";
 import AudioPlayer from "./components/AudioPlayer";
 import defaultImage from "./assets/radio.jpg";
+import Spinner from 'react-bootstrap/Spinner';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 
 // Header Component
 const Header = () => {
   return (
     <header className="header">
-      <h1>BH-BIBI-RADIO</h1>
+      <h1>
+        <div className="spinner">
+          <Spinner animation="grow" variant="danger" />
+        </div>
+      </h1>
     </header>
   );
 };

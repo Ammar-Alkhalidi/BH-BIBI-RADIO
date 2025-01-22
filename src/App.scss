@@ -63,6 +63,13 @@ h2 {
   }
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Höhe des Headers */
+}
+
 .radio {
   max-width: 90%;
   width: 100%;
@@ -190,8 +197,8 @@ audio {
 
 .header {
   background-color: #1c1c1c;
-  background-image: url(./assets/react.svg);
-  color: #f4f4f4;
+  background-image: url(./assets/bg2.jpg);
+  color: #ee1111;
   width: 100%;
   text-align: center;
   padding: 1.5em 0;
