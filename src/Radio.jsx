@@ -17,7 +17,6 @@ const Header = () => {
     <div><br
      /></div>
      <div><br /></div>
-      <h1>BH-BIBI-RADIO</h1>
 
     </header>
   );
