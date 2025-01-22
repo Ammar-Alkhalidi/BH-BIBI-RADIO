@@ -10,11 +10,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header = () => {
   return (
     <header className="header">
-      <h1>
+      
         <div className="spinner">
           <Spinner animation="grow" variant="danger" />
         </div>
-      </h1>
+    <div><br
+     /></div>
+     <div><br /></div>
+      <h1>BH-BIBI-RADIO</h1>
+
     </header>
   );
 };
