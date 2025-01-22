@@ -18,14 +18,7 @@ const Header = () => {
     </header>
   );
 };
-// Spinner Component
-const VariantsExample = () => {
-  return (
-    <div className="spinner">
-      <Spinner animation="grow" variant="danger" />
-    </div>
-  );
-};
+
 
 // Footer Component
 const Footer = () => {
