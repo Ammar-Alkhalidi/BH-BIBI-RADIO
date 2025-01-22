@@ -1,25 +1,28 @@
+/* Importing Google Fonts for custom typography */
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
+/* Body Styling */
 body {
-  background: #000;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: cover;
-  color: rgb(235, 235, 235);
-  font-family: "Architects Daughter", cursive;
+  background: #000; /* Black background for the app */
+  background-repeat: no-repeat; /* Prevent background repetition */
+  background-position-x: center; /* Center the background image */
+  background-size: cover; /* Ensure the background covers the screen */
+  color: rgb(235, 235, 235); /* Light text color for readability */
+  font-family: "Architects Daughter", cursive; /* Applying the imported font */
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex; /* Flexbox layout for centering */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the body fills the viewport height */
 }
 
+/* Styling for Main Headers */
 h1 {
   margin: 1em 0 0 0;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 3rem; /* Large text size */
+  text-align: center; /* Center-align text */
 }
 
 h2 {
@@ -27,6 +30,7 @@ h2 {
   text-align: center;
 }
 
+/* App Component Styling */
 .App {
   text-align: center;
   display: flex;
@@ -36,42 +40,44 @@ h2 {
   padding: 1em;
 
   &-logo {
-    height: 20vmin;
+    height: 20vmin; /* Scalable logo size */
     pointer-events: none;
     margin-bottom: 1em;
 
     @media (prefers-reduced-motion: no-preference) {
-      animation: App-logo-spin infinite 20s linear;
+      animation: App-logo-spin infinite 20s linear; /* Spinning animation */
     }
   }
 
   &-header {
-    background-color: #282c34;
+    background-color: #282c34; /* Dark background for the header */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(10px + 2vmin); /* Responsive font size */
     color: white;
     padding: 2em;
     box-sizing: border-box;
   }
 
   &-link {
-    color: #61dafb;
+    color: #61dafb; /* Light blue link color */
   }
 }
 
+/* Spinner Container */
 .spinner {
   display: flex;
   justify-content: right;
   padding: 50px;
-  margin: 30px;
+  margin: 20px;
   align-items: center;
-  height: 100px; /* Höhe des Headers */
+  height: 100px; /* Defines the header's height */
 }
 
+/* Radio Section Styling */
 .radio {
   max-width: 90%;
   width: 100%;
@@ -80,6 +86,7 @@ h2 {
   margin: 0 auto;
 }
 
+/* Filters Section Styling */
 .filters {
   display: flex;
   justify-content: center;
@@ -90,34 +97,36 @@ h2 {
   span {
     margin: 0.5em;
     border: 1px solid #30aa43;
-    background: #eb3b3b;
+    background: #eb3b3b; /* Red background for filter buttons */
     border-radius: 30px;
     padding: 0.5em 1em;
     transition: background 0.3s ease;
 
     &:hover {
       cursor: pointer;
-      background: linear-gradient(to bottom right, #f4f409, #000000);
+      background: linear-gradient(to bottom right, #f4f409, #000000); /* Hover effect */
     }
   }
 
   .selected {
-    background: linear-gradient(to bottom right, #5ef041, #1c1b1b);
+    background: linear-gradient(to bottom right, #5ef041, #1c1b1b); /* Highlight for selected filters */
   }
 }
 
+/* Stations Section Styling */
 .stations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
   gap: 1em;
   justify-items: center;
 }
 
+/* Individual Station Styling */
 .station {
   font-size: 1.2rem;
   border: 1px solid rgb(195, 78, 11);
   border-radius: 28px;
-  background-color: #2d2d2d;
+  background-color: #2d2d2d; /* Dark background */
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -126,14 +135,14 @@ h2 {
   transition: border-color 0.3s ease;
   width: 1142px;
   margin: 0 auto;
-  max-width: 250px;
+  max-width: 250px; /* Maximum width for station card */
   box-sizing: border-box;
 
   &:hover {
-    border-color: #ff0000;
-    transform: scale(2);
+    border-color: #ff0000; /* Red border on hover */
+    transform: scale(2); /* Zoom effect on hover */
     text-decoration: none;
-    color: #17d70d;
+    color: #17d70d; /* Green text color on hover */
   }
 
   .stationName {
@@ -149,7 +158,7 @@ h2 {
       width: 2.5em;
       height: 2.5em;
       border-radius: 50%;
-      border: 2px solid rgb(211, 0, 0);
+      border: 2px solid rgb(211, 0, 0); /* Red border for station logos */
       margin-right: 0.5em;
     }
   }
@@ -157,7 +166,7 @@ h2 {
   .name {
     text-align: center;
     flex: 1;
-    color: #17d70d;
+    color: #17d70d; /* Green text color for station names */
     min-height: 87px;
     margin: 0 0 25px;
     overflow: hidden;
@@ -166,12 +175,14 @@ h2 {
   }
 }
 
+/* Audio Player Styling */
 audio {
   width: 100%;
 }
 
+/* Custom Audio Player Container */
 .rhap_container.player {
-  background-color: rgb(39, 12, 76);
+  background-color: rgb(39, 12, 76); /* Purple background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,19 +199,20 @@ audio {
     }
 
     .rhap_main-controls button[aria-label="Play"] svg path {
-      fill: rgb(235, 235, 235) !important;
+      fill: rgb(235, 235, 235) !important; /* White play button */
     }
 
     .rhap_main-controls button[aria-label="Pause"] svg path {
-      fill: #e36bae !important;
+      fill: #e36bae !important; /* Pink pause button */
     }
   }
 }
 
+/* Header Styling */
 .header {
-  background-color: #1c1c1c;
-  background-image: url(./assets/bg2.jpg);
-  color: #ee1111;
+  background-color: #1c1c1c; /* Dark background */
+  background-image: url(./assets/bg2.jpg); /* Background image for the header */
+  color: #ee1111; /* Red text color */
   width: 100%;
   text-align: center;
   padding: 1.5em 0;
@@ -209,17 +221,17 @@ audio {
   font-weight: bold;
   border-radius: 10px;
   margin-bottom: 50px;
- 
 }
 
+/* Footer Styling */
 .footer {
-  background-color: #1c1c1c;
-  color: #aaa;
+  background-color: #1c1c1c; /* Dark background */
+  color: #aaa; /* Light gray text color */
   width: 100%;
   text-align: center;
   padding: 1em 0;
   margin-top: auto;
- border-radius: 10px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 
@@ -228,6 +240,7 @@ audio {
   line-height: 1.5;
 }
 
+/* Keyframes for Logo Spin Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -237,9 +250,10 @@ audio {
   }
 }
 
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Smaller header font size */
   }
 
   h2 {
@@ -251,10 +265,10 @@ audio {
   }
 
   .stations {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
   }
 
   .station {
-    max-width: 200px;
+    max-width: 200px; /* Smaller max-width for station cards */
   }
 }
