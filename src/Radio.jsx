@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { RadioBrowserApi } from "radio-browser-api"; // Importing the radio browser API for fetching radio station data.
 import AudioPlayer from "./components/AudioPlayer"; // Importing a custom audio player component.
 import defaultImage from "./assets/radio.jpg"; // Importing a default image for stations without a logo.
-import Spinner from 'react-bootstrap/Spinner'; // Importing Spinner for loading visuals.
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importing Bootstrap CSS for styling.
+import Spinner from "react-bootstrap/Spinner"; // Importing Spinner for loading visuals.
+import "bootstrap/dist/css/bootstrap.min.css"; // Importing Bootstrap CSS for styling.
 
 // Header Component
 const Header = () => {
@@ -14,8 +14,12 @@ const Header = () => {
         <Spinner animation="grow" variant="danger" />
       </div>
       {/* Spacer divs for styling purposes */}
-      <div><br /></div>
-      <div><br /></div>
+      <div>
+        <br />
+      </div>
+      <div>
+        <br />
+      </div>
     </header>
   );
 };
@@ -25,7 +29,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       {/* Footer content with copyright information */}
-      <p>© 2025 BH-BIBI-RADIO .  SCRIPTED  BY  AMMAR  ALKHALIDI .</p>
+      <p>© 2025 BH-BIBI-RADIO . SCRIPTED BY AMMAR ALKHALIDI .</p>
     </footer>
   );
 };

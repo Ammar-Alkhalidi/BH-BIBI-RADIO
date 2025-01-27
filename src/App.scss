@@ -104,19 +104,30 @@ h2 {
 
     &:hover {
       cursor: pointer;
-      background: linear-gradient(to bottom right, #f4f409, #000000); /* Hover effect */
+      background: linear-gradient(
+        to bottom right,
+        #f4f409,
+        #000000
+      ); /* Hover effect */
     }
   }
 
   .selected {
-    background: linear-gradient(to bottom right, #5ef041, #1c1b1b); /* Highlight for selected filters */
+    background: linear-gradient(
+      to bottom right,
+      #5ef041,
+      #1c1b1b
+    ); /* Highlight for selected filters */
   }
 }
 
 /* Stations Section Styling */
 .stations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid layout */
   gap: 1em;
   justify-items: center;
 }
@@ -265,7 +276,10 @@ audio {
   }
 
   .stations {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust grid for smaller screens */
   }
 
   .station {
